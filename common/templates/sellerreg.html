@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-3">
+                <div class="col-lg-6 mt-5" style="text-align:center">
+    <form action="" method="POST">
+    {% csrf_token %}
+    <table style="margin-left: 150px;">
+        <tr>
+            <td>{{form.seller_name.label}}</td>
+            <td>{{form.seller_name}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{form.email_id.label}}</td>
+            <td>{{form.email_id}}</td>
+        </tr>
+        <tr>
+            <td>{{form.acc_holedr.label}}</td>
+            <td>{{form.acc_holedr}}</td>
+        </tr>
+        <tr>
+            <td>{{form.acc_no.label}}</td>
+            <td>{{form.acc_no}}</td>
+        </tr>
+        <tr>
+            <td>{{form.ifsc.label}}</td>
+            <td>{{form.ifsc}}</td>
+        </tr>
+        <tr>
+            <td>{{form.phone_no.label}}</td>
+            <td>{{form.phone_no}}</td>
+        </tr>
+        <tr>
+            <td>{{form.password.label}}</td>
+            <td>{{form.password}}</td>
+            <td>{{form.password.errors}}</td>
+        </tr>
+        
+    </table><br />
+    <input type="submit" value="Submit">
+    </form>
+    {{msg}}
+   <h3> Already have an account?</h3><a href="{% url 'common:sellerlogin' %}">Login</a>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
